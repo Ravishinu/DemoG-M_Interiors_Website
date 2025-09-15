@@ -35,7 +35,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             isHovered ? 'bg-amber-100 scale-110' : 'bg-amber-50'
           }`}>
             {React.isValidElement(icon) && 
-              React.cloneElement(icon, { 
+              React.cloneElement(icon as React.ReactElement<{ className?: string }>, { 
                 className: 'w-8 h-8',
               })
             }
