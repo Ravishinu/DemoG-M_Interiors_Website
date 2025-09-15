@@ -2,11 +2,15 @@
 
 import React, { useState } from "react";
 
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
 export interface Service {
   id: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: React.ReactElement<IconProps>;
   features: string[];
 }
 
@@ -34,11 +38,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           <div className={`p-4 rounded-xl text-amber-600 transition-transform duration-300 ${
             isHovered ? 'bg-amber-100 scale-110' : 'bg-amber-50'
           }`}>
-            {React.isValidElement(icon) && 
-              React.cloneElement(icon as React.ReactElement<{ className?: string }>, { 
-                className: 'w-8 h-8',
-              })
-            }
+            {React.cloneElement(icon, { 
+              className: 'w-8 h-8',
+            })}
           </div>
           <h3 className="ml-5 text-2xl font-bold text-gray-900">{title}</h3>
         </div>
