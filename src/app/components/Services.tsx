@@ -1,11 +1,15 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
 
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+    className?: string;
+}
+
 interface Service {
     id: number;
     title: string;
     description: string;
-    icon: React.ReactNode;
+    icon: React.ReactElement<IconProps>;
     features: string[];
 }
 
