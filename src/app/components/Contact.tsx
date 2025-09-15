@@ -64,37 +64,71 @@ const Contact : React.FC = () => {
                                         <div className="grid grid-cols-2 gap-[1rem]">
                                             <div className="col-span-1">
                                                 <label htmlFor="" className="capitalize font-semibold text-[0.875rem]">first name</label><br></br>
-                                                <Field name="firstname" type="text" className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" placeholder="john" />
+                                                <Field 
+                                                    name="firstname" 
+                                                    type="text" 
+                                                    className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" 
+                                                    placeholder="john"
+                                                    suppressHydrationWarning
+                                                />
                                                 <ErrorMessage name="firstname" component="p" className="text-red-500 text-[1rem] mt-[0.5rem]"  />
                                             </div>
                                             <div className="col-span-1">
                                                 <label htmlFor="" className="capitalize font-semibold text-[0.875rem]">last name</label><br></br>
-                                                <Field name="lastname" type="text" className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" placeholder="mathew" />
+                                                <Field 
+                                                    name="lastname" 
+                                                    type="text" 
+                                                    className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" 
+                                                    placeholder="mathew"
+                                                    suppressHydrationWarning
+                                                />
                                                 <ErrorMessage name="lastname" component="p" className="text-red-500 text-[1rem] mt-[0.5rem]" />
                                             </div>
                                         </div>
                                         <div className="grid grid-cols-1 gap-[1rem] mt-[1rem]">
                                             <div className="col-span-1">
                                                 <label htmlFor="" className="capitalize font-semibold text-[0.875rem]">email</label><br></br>
-                                                <Field name="email" type="text" className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" placeholder="john@gmail.com" />
+                                                <Field 
+                                                    name="email" 
+                                                    type="email" 
+                                                    className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" 
+                                                    placeholder="john@gmail.com"
+                                                    suppressHydrationWarning
+                                                />
                                                 <ErrorMessage name="email" component="p" className="text-red-500 text-[1rem] mt-[0.5rem]" />
                                             </div>
                                         </div>
                                         <div className="grid grid-cols-1 gap-[1rem] mt-[1rem]">
                                             <div className="col-span-1">
                                                 <label htmlFor="" className="capitalize font-semibold text-[0.875rem]">phone</label><br></br>
-                                                <Field name="number" type="text" className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" placeholder="(+1) 999 999 9999" />
+                                                <Field 
+                                                    name="number" 
+                                                    type="tel" 
+                                                    className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" 
+                                                    placeholder="(+1) 999 999 9999"
+                                                    suppressHydrationWarning
+                                                />
                                                 <ErrorMessage name="number" component="p" className="text-red-500 text-[1rem] mt-[0.5rem]" />
                                             </div>
                                         </div>
                                         <div className="grid grid-cols-1 gap-[1rem] mt-[1rem]">
                                             <div className="col-span-1">
                                                 <label htmlFor="" className="capitalize font-semibold text-[0.875rem]">tell us about your project</label><br></br>
-                                                <Field name="message" as="textarea"  className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" placeholder="Please tell us about your project in detail" />
+                                                <Field 
+                                                    name="message" 
+                                                    as="textarea"  
+                                                    className="bg-white w-full px-[1rem] py-[0.5rem] rounded-lg focus:outline-none" 
+                                                    placeholder="Please tell us about your project in detail"
+                                                    suppressHydrationWarning
+                                                />
                                                 <ErrorMessage name="message" component="p" className="text-red-500 text-[1rem] mt-[0.5rem]" />
                                             </div>
                                         </div>
-                                        <button type="submit" className="w-full capitalize cursor-pointer bg-black px-[0.75rem] py-[0.5rem] text-[1rem] text-white rounded-lg my-[0.5rem]">
+                                        <button 
+                                            type="submit" 
+                                            className="w-full capitalize cursor-pointer bg-black px-[0.75rem] py-[0.5rem] text-[1rem] text-white rounded-lg my-[0.5rem]"
+                                            suppressHydrationWarning
+                                        >
                                             {
                                                 onLoad?
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mx-auto animate-spin  ">
@@ -120,9 +154,9 @@ const Contact : React.FC = () => {
                                 </div>
                                 <div className="">
                                     <h1 className="font-semibold capitalize">Visit Our Studio</h1>
-                                    <p className="text-gray-600">123 Design Street, New York, NY 10001</p>
+                                    <p className="text-gray-600">35/9, Betaspace, Desabandhu Street, Ram Nagar, Coimbatore - 641009</p>
                                     <div className="mt-[0.5rem]">
-                                        <a href="/" className="capitalize inline-flex items-center gap-1">
+                                        <a href="https://maps.google.com/?q=35/9,Betaspace,Desabandhu Street,Ram Nagar,Coimbatore-641009" target="_blank" rel="noopener noreferrer" className="capitalize inline-flex items-center gap-1">
                                             <p className="text-[0.875rem] font-semibold">get directions</p>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
@@ -140,9 +174,9 @@ const Contact : React.FC = () => {
                                 </div>
                                 <div className="">
                                     <h1 className="font-semibold capitalize">call us</h1>
-                                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                                    <p className="text-gray-600">+91 94872 88218</p>
                                     <div className="mt-[0.5rem]">
-                                        <a href="/" className="capitalize inline-flex items-center gap-1">
+                                        <a href="tel:+919487288218" className="capitalize inline-flex items-center gap-1">
                                             <p className="text-[0.875rem] font-semibold">call now</p>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
@@ -160,9 +194,9 @@ const Contact : React.FC = () => {
                                 </div>
                                 <div className="">
                                     <h1 className="font-semibold capitalize">email us</h1>
-                                    <p className="text-gray-600">sample@gmail.com</p>
+                                    <p className="text-gray-600">gminteriors474@gmail.com</p>
                                     <div className="mt-[0.5rem]">
-                                        <a href="/" className="capitalize inline-flex items-center gap-1">
+                                        <a href="mailto:gminteriors474@gmail.com" className="capitalize inline-flex items-center gap-1">
                                             <p className="text-[0.875rem] font-semibold">send email</p>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />

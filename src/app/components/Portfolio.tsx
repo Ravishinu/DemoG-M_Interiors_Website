@@ -63,16 +63,331 @@ const sampleData: Record<string, { datas: CardData[] }> = {
     },
     commercial: {
         datas: [
+            // Commercial images from public/Commercial directory
             {
-                id: 'c1',
-                image: '/placeholder-commercial.jpg',
-                title: 'Office Space',
-                description: 'Modern office interior design',
+                id: 'com-1',
+                image: '/Commercial/Commercial_1.jpg',
+                title: 'Commercial Project 1',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-2',
+                image: '/Commercial/Commercial_2.jpg',
+                title: 'Commercial Project 2',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-3',
+                image: '/Commercial/Commercial_3.jpg',
+                title: 'Commercial Project 3',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-4',
+                image: '/Commercial/Commercial_4.jpg',
+                title: 'Commercial Project 4',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-5',
+                image: '/Commercial/IMG-20230820-WA0013.jpg',
+                title: 'Commercial Project 5',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-6',
+                image: '/Commercial/IMG-20230820-WA0016.jpg',
+                title: 'Commercial Project 6',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-7',
+                image: '/Commercial/IMG-20230820-WA0022.jpg',
+                title: 'Commercial Project 7',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-8',
+                image: '/Commercial/IMG-20230820-WA0027.jpg',
+                title: 'Commercial Project 8',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-9',
+                image: '/Commercial/IMG-20230820-WA0028.jpg',
+                title: 'Commercial Project 9',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-10',
+                image: '/Commercial/IMG-20230820-WA0032.jpg',
+                title: 'Commercial Project 10',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'com-11',
+                image: '/Commercial/IMG_20230821_132358268.jpg',
+                title: 'Commercial Project 11',
+                description: 'Professional commercial interior design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'All'
+            },
+            {
+                id: 'c2',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-2.jpg',
+                title: 'Executive Conference Room',
+                description: 'Professional conference room with premium finishes',
                 location: 'Mumbai',
                 category: 'commercial',
                 subcategory: 'Conference Hall'
             },
-            // Add more sample data as needed
+            {
+                id: 'c3',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-3.jpg',
+                title: 'Luxury Office Lobby',
+                description: 'Grand lobby with modern lighting and furniture',
+                location: 'Delhi',
+                category: 'commercial',
+                subcategory: 'Reception/Tables'
+            },
+            {
+                id: 'c4',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-4.jpg',
+                title: 'Modern Workspace',
+                description: 'Open office layout with ergonomic workstations',
+                location: 'Hyderabad',
+                category: 'commercial',
+                subcategory: 'Meeting Area'
+            },
+            {
+                id: 'c5',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-5.jpg',
+                title: 'Executive Office',
+                description: 'Luxurious private office with premium finishes',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'MD Rooms/Tables'
+            },
+            {
+                id: 'c6',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-6.jpg',
+                title: 'Modern Conference Hall',
+                description: 'State-of-the-art conference facility',
+                location: 'Mumbai',
+                category: 'commercial',
+                subcategory: 'Conference Hall'
+            },
+            {
+                id: 'c7',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-7.jpg',
+                title: 'Contemporary Office Space',
+                description: 'Sleek and functional workspace design',
+                location: 'Delhi',
+                category: 'commercial',
+                subcategory: 'Meeting Area'
+            },
+            {
+                id: 'c8',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-8.jpg',
+                title: 'Executive Boardroom',
+                description: 'Elegant boardroom with premium furnishings',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'Conference Hall'
+            },
+            {
+                id: 'c9',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-9.jpg',
+                title: 'Modern Office Interior',
+                description: 'Contemporary workspace with clean lines',
+                location: 'Mumbai',
+                category: 'commercial',
+                subcategory: 'Meeting Area'
+            },
+            {
+                id: 'c10',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-10.jpg',
+                title: 'Luxury Office Space',
+                description: 'High-end office with premium finishes',
+                location: 'Delhi',
+                category: 'commercial',
+                subcategory: 'MD Rooms/Tables'
+            },
+            {
+                id: 'c11',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-11.jpg',
+                title: 'Executive Meeting Room',
+                description: 'Sophisticated meeting space with modern design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'Conference Hall'
+            },
+            {
+                id: 'c12',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-12.jpg',
+                title: 'Modern Office Design',
+                description: 'Contemporary workspace with natural light',
+                location: 'Mumbai',
+                category: 'commercial',
+                subcategory: 'Meeting Area'
+            },
+            {
+                id: 'c13',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-13.jpg',
+                title: 'Luxury Office Reception',
+                description: 'Grand reception with elegant design elements',
+                location: 'Delhi',
+                category: 'commercial',
+                subcategory: 'Reception/Tables'
+            },
+            {
+                id: 'c14',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-14.jpg',
+                title: 'Modern Conference Facility',
+                description: 'State-of-the-art conference room design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'Conference Hall'
+            },
+            {
+                id: 'c15',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-15.jpg',
+                title: 'Executive Workspace',
+                description: 'Luxurious office with premium finishes',
+                location: 'Mumbai',
+                category: 'commercial',
+                subcategory: 'MD Rooms/Tables'
+            },
+            {
+                id: 'c16',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-16.jpg',
+                title: 'Modern Office Interior',
+                description: 'Contemporary design with clean lines',
+                location: 'Delhi',
+                category: 'commercial',
+                subcategory: 'Meeting Area'
+            },
+            {
+                id: 'c17',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-17.jpg',
+                title: 'Luxury Boardroom',
+                description: 'Elegant boardroom with premium furnishings',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'Conference Hall'
+            },
+            {
+                id: 'c18',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-18.jpg',
+                title: 'Modern Office Space',
+                description: 'Contemporary workspace design',
+                location: 'Mumbai',
+                category: 'commercial',
+                subcategory: 'Meeting Area'
+            },
+            {
+                id: 'c19',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-19.jpg',
+                title: 'Executive Office Interior',
+                description: 'Luxurious office with modern design',
+                location: 'Delhi',
+                category: 'commercial',
+                subcategory: 'MD Rooms/Tables'
+            },
+            {
+                id: 'c20',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-20.jpg',
+                title: 'Modern Conference Room',
+                description: 'State-of-the-art meeting space',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'Conference Hall'
+            },
+            {
+                id: 'c21',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-21.jpg',
+                title: 'Contemporary Office Design',
+                description: 'Sleek and functional workspace',
+                location: 'Mumbai',
+                category: 'commercial',
+                subcategory: 'Meeting Area'
+            },
+            {
+                id: 'c22',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-22.jpg',
+                title: 'Luxury Office Space',
+                description: 'Elegant design with premium finishes',
+                location: 'Delhi',
+                category: 'commercial',
+                subcategory: 'MD Rooms/Tables'
+            },
+            {
+                id: 'c23',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-23.jpg',
+                title: 'Modern Boardroom',
+                description: 'Contemporary meeting space design',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'Conference Hall'
+            },
+            {
+                id: 'c24',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-24.jpg',
+                title: 'Executive Workspace',
+                description: 'Luxurious office with modern design',
+                location: 'Mumbai',
+                category: 'commercial',
+                subcategory: 'MD Rooms/Tables'
+            },
+            {
+                id: 'c25',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-25.jpg',
+                title: 'Modern Office Interior',
+                description: 'Contemporary workspace with clean lines',
+                location: 'Delhi',
+                category: 'commercial',
+                subcategory: 'Meeting Area'
+            },
+            {
+                id: 'c26',
+                image: '/assets/portfolio/commercial/IMG-20240915-212500-26.jpg',
+                title: 'Luxury Conference Hall',
+                description: 'Elegant conference facility',
+                location: 'Bangalore',
+                category: 'commercial',
+                subcategory: 'Conference Hall'
+            }
         ]
     },
     restaurant: {
