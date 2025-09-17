@@ -7,9 +7,9 @@ import axios from "axios";
 interface CardData {
     id: string;
     image: string;
-    location: string;
-    title: string;
-    description: string;
+    location?: string;
+    title?: string;
+    description?: string;
     category: string;
     subcategory: string;
 }
@@ -50,15 +50,83 @@ const sampleData: Record<string, { datas: CardData[] }> = {
     residential: {
         datas: [
             {
-                id: '1',
-                image: '/placeholder-residential.jpg',
-                title: 'Modern Living Room',
-                description: 'Elegant living room with modern furniture',
-                location: 'Bangalore',
+                id: 'res-1',
+                image: '/Residential/IMG_20231211_183215282.jpg',
                 category: 'residential',
                 subcategory: 'TV Unit'
             },
-            // Add more sample data as needed
+            {
+                id: 'res-2',
+                image: '/Residential/IMG_20250308_232455.jpg',
+                category: 'residential',
+                subcategory: 'Bedroom Wardrobe'
+            },
+            {
+                id: 'res-3',
+                image: '/Residential/IMG_20250308_232004.jpg',
+                category: 'residential',
+                subcategory: 'False Ceiling Design'
+            },
+            {
+                id: 'res-4',
+                image: '/Residential/IMG_20250308_231654.jpg',
+                category: 'residential',
+                subcategory: 'Modular Kitchen'
+            },
+            {
+                id: 'res-5',
+                image: '/Residential/IMG_20250307_213349.jpg',
+                category: 'residential',
+                subcategory: 'Dining Partition'
+            },
+            {
+                id: 'res-6',
+                image: '/Residential/IMG_20250307_213229.jpg',
+                category: 'residential',
+                subcategory: 'Pooja Room'
+            },
+            {
+                id: 'res-7',
+                image: '/Residential/IMG-20240927-WA0017.jpg',
+                category: 'residential',
+                subcategory: 'Texture / Wallpaper'
+            },
+            {
+                id: 'res-8',
+                image: '/Residential/IMG-20240927-WA0026.jpg',
+                category: 'residential',
+                subcategory: 'Restroom Variety Box'
+            },
+            {
+                id: 'res-9',
+                image: '/Residential/IMG_20231221_150640607.jpg',
+                category: 'residential',
+                subcategory: 'TV Unit'
+            },
+            {
+                id: 'res-10',
+                image: '/Residential/IMG_20250129_174051.jpg',
+                category: 'residential',
+                subcategory: 'Bedroom Wardrobe'
+            },
+            {
+                id: 'res-11',
+                image: '/Residential/IMG_20250307_213106.jpg',
+                category: 'residential',
+                subcategory: 'False Ceiling Design'
+            },
+            {
+                id: 'res-12',
+                image: '/Residential/IMG_20250307_213122.jpg',
+                category: 'residential',
+                subcategory: 'Modular Kitchen'
+            },
+            {
+                id: 'res-13',
+                image: '/Residential/IMG-20240927-WA0008.jpg',
+                category: 'residential',
+                subcategory: 'Dining Partition'
+            }
         ]
     },
     commercial: {
@@ -394,14 +462,40 @@ const sampleData: Record<string, { datas: CardData[] }> = {
         datas: [
             {
                 id: 'r1',
-                image: '/placeholder-restaurant.jpg',
-                title: 'Fine Dining',
-                description: 'Elegant restaurant interior',
-                location: 'Delhi',
+                image: '/Restaurant/Res_1.jpg',
+                title: 'Modern Restaurant Interior',
+                description: 'Contemporary restaurant design with elegant lighting',
+                location: 'Bangalore',
                 category: 'restaurant',
                 subcategory: 'Reception / Tables'
             },
-            // Add more sample data as needed
+            {
+                id: 'r2',
+                image: '/Restaurant/IMG-20240919-WA0026.jpg',
+                title: 'Luxury Dinning Area',
+                description: 'Sophisticated dining space with premium finishes',
+                location: 'Bangalore',
+                category: 'restaurant',
+                subcategory: 'Furniture Works'
+            },
+            {
+                id: 'r3',
+                image: '/Restaurant/IMG-20240919-WA0027.jpg',
+                title: 'Elegant Bar Counter',
+                description: 'Stylish bar area with modern seating',
+                location: 'Bangalore',
+                category: 'restaurant',
+                subcategory: 'Kitchen Unit'
+            },
+            {
+                id: 'r4',
+                image: '/Restaurant/IMG-20240919-WA0028.jpg',
+                title: 'Contemporary Cafe Space',
+                description: 'Chic and modern cafe interior',
+                location: 'Bangalore',
+                category: 'restaurant',
+                subcategory: 'Partition Units'
+            }
         ]
     }
 };
@@ -520,10 +614,6 @@ const Portfolio: React.FC = () => {
                                 key={card.id}
                                 id={card.id}
                                 image={card.image}
-                                title={card.title}
-                                description={card.description}
-                                location={card.location}
-                                type={card.category}
                                 subcategory={card.subcategory}
                             />
                         ))}
